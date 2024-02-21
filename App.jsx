@@ -2,10 +2,37 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import ProfileCard from './src/components/ProfileCard';
 
+const alunos =[
+  {
+    name: 'BG',
+    bio: 'Cursando desenvolvimento de sistemas',
+    course: 'Desenvolvimento de sistemas',
+    picture: require('./assets/images/bgprofile.jpg')
+  },
+  {
+    name: 'BG',
+    bio: 'Cursando desenvolvimento de sistemas',
+    course: 'Desenvolvimento de sistemas',
+    picture: require('./assets/images/bgprofile.jpg')
+  },
+  {
+    name: 'BG',
+    bio: 'Cursando desenvolvimento de sistemas',
+    course: 'Desenvolvimento de sistemas',
+    picture: require('./assets/images/bgprofile.jpg')
+  },
+  {
+    name: 'BG',
+    bio: 'Cursando desenvolvimento de sistemas',
+    course: 'Desenvolvimento de sistemas',
+    picture: require('./assets/images/bgprofile.jpg')
+  }
+]
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <ProfileCard name="BG" bio={'Cursando desenvolvimento de sistemas'} course={'Desenvolvimento de sistemas'} picture={require('./assets/images/bgprofile.jpg')} />
+      <ProfileCard alunos={alunos}/>
       <StatusBar style="auto" />
     </View>
   );

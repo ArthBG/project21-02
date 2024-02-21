@@ -1,16 +1,31 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 
-const ProfileCard = ({ name, course, bio, picture }) => {
+const ProfileCard = ({ alunos }) => {
   return (
     <View>
-        <Image source={picture} style={{width: 200, height: 200}} />	
-        <Text>{name}</Text>
-        <Text>{course}</Text>
-        <Text>{bio}</Text>
+        {alunos.map((aluno, index) => (
+            <View key={index}>
+            <Image style={styles.Image} source={aluno.picture} />
+            <Text>{aluno.name}</Text>
+            <Text>{aluno.bio}</Text>
+            <Text>{aluno.course}</Text>
+            </View>
+        ))}
          
     </View>
   )
 }
 
+const styles = StyleSheet.create({
+    Image: {
+        width: 100,
+        height: 100,
+        borderRadius: 5
+    }
+})
+
+
+
 export default ProfileCard
+
